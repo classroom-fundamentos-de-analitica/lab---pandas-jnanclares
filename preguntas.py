@@ -302,4 +302,4 @@ def pregunta_13():
     tbl0 = pd.read_csv("tbl0.tsv", sep="\t")
     tbl2 = pd.read_csv("tbl2.tsv", sep="\t")
 
-    return tbl0.merge(tbl2, on ="_c0")[["_c1","_c5b"]].groupby("_c1").sum()
+    return tbl0.merge(tbl2, on ="_c0")[["_c1","_c5b"]].groupby("_c1").sum()["_c5b"]
